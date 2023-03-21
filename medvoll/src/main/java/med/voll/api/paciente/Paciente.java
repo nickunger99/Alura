@@ -48,7 +48,11 @@ public class Paciente {
     public void inativar() {
         this.ativo = false;
     }
+
     @Embedded
     private Endereco endereco;
 
+    public void excluir() {
+        this.ativo = false;
+    }
 }
