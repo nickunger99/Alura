@@ -9,7 +9,8 @@ import java.time.LocalDateTime;
 
 public interface MedicoRepository extends JpaRepository<Medico, Long> {
     Page<Medico> findAllByAtivoTrue(Pageable pageable);
-//
+
+
 //    @Query("SELECT m FROM Medico m" +
 //            "WHERE m.ativo = true" +
 //            "AND m.especialidade = :especialidade" +
