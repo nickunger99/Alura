@@ -18,13 +18,13 @@ import org.springframework.web.bind.annotation.*;
 public class ConsultaController {
 
     @Autowired
-    private AgendaDeConsultas  agenda;
+    private AgendaDeConsultas agenda;
 
     @PostMapping
     @Transactional
-    public ResponseEntity agendar (@RequestBody @Valid DadosAgendamentoConsulta dados) {
-       var dto = agenda.agendar(dados);
-        return  ResponseEntity.ok(dto);
+    public ResponseEntity agendar(@RequestBody @Valid DadosAgendamentoConsulta dados) {
+        var dto = agenda.agendar(dados);
+        return ResponseEntity.ok(dto);
     }
 
     @DeleteMapping
