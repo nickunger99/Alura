@@ -1,3 +1,5 @@
-alter table pacientes add column ativo tinyint;
+alter table pacientes add column ativo bigint;
 update pacientes set ativo = 1;
-alter table pacientes modify ativo tinyint not null;
+ALTER TABLE pacientes
+ALTER COLUMN ativo SET DATA TYPE bigint,
+ALTER COLUMN ativo SET NOT NULL;
